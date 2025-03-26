@@ -3,6 +3,8 @@
 *{
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -37,9 +39,11 @@ body{
 
 .text{
     display: flex;
-    flex-direction: column;
-    /* align-items: end; */
-    margin-bottom: 25px;
+        flex-direction: column;
+        /* align-items: end; */
+        margin-bottom: 58px;
+        /* justify-content: right; */
+        gap: 10px;
 }
 h2{
     padding: 0;
@@ -48,4 +52,37 @@ h2{
 
 .text p{
     color: gray;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #232929;
+    box-shadow: #ffffff;
+}
+
+.data_wrapper{
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    /* padding: 20px; */
+}
+
+.data-input{
+    background-color: #0f0f0f;
+    border: 1px solid gray;
+    font-size: 15px;
+    border-radius: 7px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.add_btn{
+    background-color: #ff0000;
+    border: 1px solid gray;
+    font-size: 15px;
+    border-radius: 7px;
+    padding: 10px 20px;
+    color: white;
 }
