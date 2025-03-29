@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>YouTube Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav>
-    <div class="data_wrapper">
-        <div class="input_area">
-            <input type="text" placeholder="enter title" class="data-input">
+    <header>
+        <h1>YouTube Clone</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
         </div>
-        <div class="add">
-            <button class="add_btn">Update</button>
-        </div>
-    </div>
-</nav>
-    <div class="cointainer">
-        <div class="card">
-            <div class="image">
-                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw" alt="">
-            </div>
-            <div class="text">
-                <h2>ashachlahcie</h2>
-                <p>codewithharry . 727k views . 2 months ago</p>
-            </div>
-        </div>
-    </div>
+    </header>
+
+    <main>
+        <section class="add-video-section">
+            <form id="add-video-form">
+                <input type="file" id="video-file" accept="video/*" required>
+                <div class="thumbnail-input">
+                    <select id="thumbnail-type">
+                        <option value="url">URL</option>
+                        <option value="file">Upload Image</option>
+                    </select>
+                    <input type="text" id="video-thumbnail" placeholder="Thumbnail URL">
+                    <input type="file" id="thumbnail-file" accept="image/*" style="display: none;">
+                </div>
+                <input type="text" id="video-title" placeholder="Video Title" required>
+                <input type="text" id="video-channel" placeholder="Channel Name" required>
+                <input type="number" id="video-views" placeholder="Views" required>
+                <button type="submit">Add Video</button>
+            </form>
+        </section>
+
+        <section class="video-list" id="video-list">
+            <!-- Video cards will be dynamically added here -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 
-<script src="script.js"></script>
 </html>
